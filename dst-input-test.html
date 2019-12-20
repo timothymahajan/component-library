@@ -1,0 +1,63 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="dst-box.css">
+<style>
+body {
+  	background-color: AliceBlue;
+  	padding-left: 60px;
+  	font-family: Arial, sans-serif;
+}
+h3 {
+	font-family: Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+
+
+<h3>Custom Input Sampler.</h3>
+<br>
+<p>
+Usage: <xmp><dst-input></dst-input> </xmp>
+Possible attributes:
+<ul>
+<li><b>size</b>   --can be lg, md, and sm, the default is sm--</li>
+<li><b>placeholder</b>   --a hint text--</li>
+<li><b>label-left</b>   --a text that will appear at the left of the input--</li>
+<li><b>label-top</b>   --a text that will appear on the top of the input--</li>
+<li><b>max</b>   --a maximum number of characters--</li>
+<li><b>valid_input</b>   --a regex to validete the input--</li>
+<ul>
+</p>
+<br>
+
+<dst-input placeholder = "Default"></dst-input>
+<br><br>
+<dst-input size = "lg" placeholder = "Large"></dst-input>
+<br><br>
+<dst-input size = "md" placeholder = "Medium"></dst-input>
+<br><br>
+<dst-input size = "sm" placeholder = "Small" ></dst-input>
+<br><br>
+<dst-input size = "lg" placeholder = "Large" label-left = "Large Box with the label on the left:"></dst-input>
+<br><br>
+<dst-input size = "md" placeholder = "Medium"  label-left = "Meduim Box with the label on the left:"></dst-input>
+<br><br>
+<dst-input size = "sm" placeholder = "Small"  label-left = "Small Box with the label on the left that does not accept anything but digits:" valid_input = '^[0-9]*$'></dst-input>
+<br>
+<p>Try what you can and what you cannot drag and drop or copy and paste - here is the sample: qwertyuiop1234567890asd9023)(*h3214070=-n 80-///GHJUIYUIYUIYUIYUIY'</p>
+<br><br>
+<dst-input size = "lg" placeholder = "Large" label-top = "Disabled:" disabled></dst-input>
+<br><br>
+<dst-input size = "lg" placeholder = "Large" label-top = "Large Box with the label on the top:"></dst-input>
+<br><br>
+<dst-input size = "md" placeholder = "Medium"  label-top = "Meduim Box with the label on the top and counter:" max = "6" counter = "true"></dst-input>
+<br>
+<p>The box above is limited to only 6 characters. Try to drop more. Try to drop 6 or less. Try the same with copy and paste.</p>
+<br><br>
+<dst-input size = "sm" placeholder = "Small"  label-top = "Small Box with the label on the top with max input length of 3 character, digits only, no counter:" max = "3" valid_input = '^[0-9]*$' ></dst-input>
+<br><br>
+<script src="./dst-input.js"></script>
+</body>
+
+</html>
